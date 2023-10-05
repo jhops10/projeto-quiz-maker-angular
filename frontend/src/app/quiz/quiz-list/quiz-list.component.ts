@@ -22,4 +22,8 @@ export class QuizListComponent {
   openQuizForm() {
     this.router.navigate(['form']);
   }
+
+  onEdit(id: any) {
+    this.router.navigate(['edit', id]);
+  }
 }
