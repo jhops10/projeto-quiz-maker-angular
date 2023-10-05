@@ -1,0 +1,46 @@
+{
+  "quizzes": [
+    {
+      "id": 1,
+      "name": "Conhecimentos Gerais",
+      "numQuestions": 5,
+      "questions": [
+        {
+          "question": "Qual é o maior planeta do nosso sistema solar?",
+          "rest1": "Júpiter",
+          "rest2": "Terra",
+          "rest3": "Marte",
+          "rest4": "Vênus"
+        },
+        {
+          "question": "Quem escreveu a famosa peça de teatro 'Romeu e Julieta'?",
+          "rest1": "William Shakespeare",
+          "rest2": "Charles Dickens",
+          "rest3": "Jane Austen",
+          "rest4": "F. Scott Fitzgerald"
+        },
+        {
+          "question": "Qual é o maior órgão do corpo humano?",
+          "rest1": "Pele",
+          "rest2": "Coração",
+          "rest3": "Estômago",
+          "rest4": "Fígado"
+        },
+        {
+          "question": "Qual é o país mais populoso do mundo?",
+          "rest1": "Índia",
+          "rest2": "Estados Unidos",
+          "rest3": "Rússia",
+          "rest4": "Brasil"
+        },
+        {
+          "question": "Qual é o processo pelo qual as plantas convertem a luz solar em energia?",
+          "rest1": "Fotossíntese",
+          "rest2": "Respiração",
+          "rest3": "Fermentação",
+          "rest4": "Oxidação"
+        }
+      ]
+    }
+  ]
+}
