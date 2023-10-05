@@ -1,0 +1,101 @@
+<form class="form1 needs-validation" [formGroup]="form1" *ngIf="!continue">
+  <div class="mb-3">
+    <label for="quizName" class="form-label">Nome do Quiz:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="quizName"
+      placeholder="Insira o nome do Quiz"
+      formControlName="quizName"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="numQuestions" class="form-label"
+      >Escolha o número de Perguntas</label
+    >
+    <select
+      class="form-select"
+      id="numQuestions"
+      formControlName="numQuestions"
+    >
+      <option disabled selected>Número de Questões</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+    </select>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-dark"
+    [disabled]="form1.invalid"
+    (click)="onSubmitForm1(form1)"
+  >
+    Continuar
+  </button>
+  <div *ngIf="form1.invalid" class="alert alert-light" role="alert">
+    Preencha todos os campos.
+  </div>
+</form>
+
+<form
+  class="form2 needs-validation"
+  [formGroup]="form2"
+  *ngIf="continue && !isFinished"
+>
+  <div class="mb-3">
+    <label for="question" class="form-label">Pergunta {{ numQuestion }}:</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Insira uma pergunta"
+      id="question"
+      formControlName="question"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="#" class="form-label">Respostas:</label>
+    <input
+      type="text"
+      class="form-control correct-input"
+      placeholder="Insira a resposta CORRETA*"
+      formControlName="res1"
+    />
+    <input
+      type="text"
+      class="form-control incorrect-input"
+      placeholder="Insira uma resposta INCORRETA*"
+      formControlName="res2"
+    />
+    <input
+      type="text"
+      class="form-control incorrect-input"
+      placeholder="Insira uma resposta INCORRETA"
+      formControlName="res3"
+    />
+    <input
+      type="text"
+      class="form-control incorrect-input"
+      placeholder="Insira uma resposta INCORRETA"
+      formControlName="res4"
+    />
+  </div>
+  <button
+    type="submit"
+    class="btn btn-dark"
+    [disabled]="form2.invalid"
+    (click)="onSubmitForm2(form2)"
+    *ngIf="!isFinished"
+  >
+    Continuar
+  </button>
+  <div *ngIf="!isFinished" class="alert alert-warning" role="alert">
+    Os campos com * são obrigatórios.
+  </div>
+</form>
+<button
+  type="submit"
+  class="btn btn-dark"
+  *ngIf="isFinished"
+  (click)="finish()"
+>
+  Concluir
+</button>

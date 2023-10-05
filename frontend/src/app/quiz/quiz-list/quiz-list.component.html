@@ -36,4 +36,11 @@
   </div>
   <!-- Spinner -->
 </div>
-<button type="button" *ngIf="quizzes" class="btn btn-dark">Criar Quiz</button>
+<button
+  type="button"
+  *ngIf="quizzes"
+  class="btn btn-dark"
+  (click)="openQuizForm()"
+>
+  Criar Quiz
+</button>

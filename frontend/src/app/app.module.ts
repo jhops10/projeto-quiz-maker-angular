@@ -9,6 +9,8 @@ import { QuizInfoComponent } from './quiz/quiz-info/quiz-info.component';
 import { BtnHomeComponent } from './components/btn-home/btn-home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { QuizListComponent } from './quiz/quiz-list/quiz-list.component';
+import { QuizFormComponent } from './quiz/quiz-form/quiz-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,16 @@ import { QuizListComponent } from './quiz/quiz-list/quiz-list.component';
     QuizInfoComponent,
     BtnHomeComponent,
     QuizListComponent,
+    QuizFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

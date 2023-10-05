@@ -1,0 +1,26 @@
+label {
+  font-weight: 600;
+}
+
+.alert {
+  margin: .8rem 0;
+}
+
+form {
+  width: 380px;
+}
+
+.form2 input {
+  margin-bottom: .5em;
+}
+
+.correct-input::placeholder {
+  background-color: #a6d5b66e;
+  color: #055105b4;
+}
+
+.incorrect-input::placeholder {
+  background-color: #d5a6a66e;
+  color: #510508b9;
+
+}
