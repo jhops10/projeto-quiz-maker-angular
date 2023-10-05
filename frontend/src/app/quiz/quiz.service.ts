@@ -18,6 +18,34 @@ export class QuizService {
     );
   }
 
+  readQuizById(id: number): Observable<Quiz> {
+    return this.http.get<Quiz>(`${this.url}/${id}`).pipe(
+      map((q) => q),
+      catchError((e) => this.error(e))
+    );
+  }
+
+  createQuiz(quiz: Quiz): Observable<Quiz> {
+    return this.http.post<Quiz>(this.url, quiz).pipe(
+      map((q) => q),
+      catchError((e) => this.error(e))
+    );
+  }
+
+  updateQuiz(quiz: Quiz): Observable<Quiz> {
+    return this.http.put<Quiz>(`${this.url}/${quiz.id}`, quiz).pipe(
+      map((q) => q),
+      catchError((e) => this.error(e))
+    );
+  }
+
+  deleteQUiz(id: number): Observable<Quiz> {
+    return this.http.delete<Quiz>(`${this.url}/${id}`).pipe(
+      map((q) => q),
+      catchError((e) => this.error(e))
+    );
+  }
+
   error(e?: any): Observable<any> {
     return e;
   }
