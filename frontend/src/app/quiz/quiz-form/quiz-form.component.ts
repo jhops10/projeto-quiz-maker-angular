@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Quiz } from '../quiz';
-import { QuizService } from '../quiz.service';
+import { QuizService } from '../../services/quiz.service';
+import { AlertService } from 'src/app/services/alert.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quiz-form',
@@ -21,7 +23,9 @@ export class QuizFormComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private quizService: QuizService
+    private quizService: QuizService,
+    private alertService: AlertService,
+    private router: Router
   ) {
     this.form1 = this.formBuilder.group({
       quizName: [null, [Validators.required]],
@@ -63,9 +67,15 @@ export class QuizFormComponent {
       questions: this.questions,
     };
     this.quizService.createQuiz(this.quiz).subscribe({
-      next: () => console.log('Quiz criado com sucesso!'),
-      error: () => console.log('Erro ao criar Quiz'),
-      complete: () => console.log('Quiz criado!'),
+      next: () =>
+        this.alertService.showAlert(
+          'Quiz criado com sucesso!',
+          'success',
+          3000
+        ),
+      error: () =>
+        this.alertService.showAlert('Erro ao criar Quiz', 'danger', 3000),
+      complete: () => this.router.navigate(['list']),
     });
     console.log(this.quiz);
   }

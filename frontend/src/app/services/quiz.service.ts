@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map } from 'rxjs';
-import { Quiz } from './quiz';
+import { Quiz } from '../quiz/quiz';
 
 @Injectable({
   providedIn: 'root',

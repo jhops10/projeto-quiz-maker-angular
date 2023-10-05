@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { QuizListComponent } from './quiz/quiz-list/quiz-list.component';
 import { QuizFormComponent } from './quiz/quiz-form/quiz-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './components/alert/alert.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BtnHomeComponent,
     QuizListComponent,
     QuizFormComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
