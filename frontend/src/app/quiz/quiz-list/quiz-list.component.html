@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="container-table">
+    <table class="table" *ngIf="quizzes; else spinner">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr class="align-middle" *ngFor="let quiz of quizzes">
+          <td>{{ quiz.name }}</td>
+          <td>
+            <div class="btn-group me-2" role="group" aria-label="Second group">
+              <button
+                type="button"
+                class="btn btn-warning bi bi-play-fill"
+              ></button>
+              <button
+                type="button"
+                class="btn btn-secondary bi bi-pencil-square"
+              ></button>
+              <button type="button" class="btn btn-danger bi bi-trash"></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Spinner -->
+  <ng-template #spinner>
+    <div class="spinner-border" role="status"></div>
+  </ng-template>
+  <div ng-show="!quizzes.length" style="display: none">
+    Você ainda não criou nenhum quiz.
+  </div>
+  <!-- Spinner -->
+</div>
+<button type="button" *ngIf="quizzes" class="btn btn-dark">Criar Quiz</button>
