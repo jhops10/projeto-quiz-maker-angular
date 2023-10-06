@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Conhecimentos Gerais",
-      "numQuestions": 10,
+      "numQuestions": 5,
       "questions": [
         {
           "question": "Qual é a capital da França?",
