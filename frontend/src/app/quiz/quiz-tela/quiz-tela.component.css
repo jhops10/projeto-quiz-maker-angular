@@ -1,0 +1,26 @@
+label {
+  width: 100%;
+  margin: .5rem 0;
+}
+
+h5 {
+  margin: 1rem 0;
+}
+
+button {
+  margin: .6rem;
+}
+
+.currentQuestion {
+  font-size: 0.8rem;
+}
+
+.correct {
+  background-color: #a6d5b66e;
+  color: #055105b4;
+}
+
+.incorrect {
+  background-color: #d5a6a66e;
+  color: #510508b9;
+}

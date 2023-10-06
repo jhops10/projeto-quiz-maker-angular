@@ -40,7 +40,7 @@ export class QuizService {
     );
   }
 
-  deleteQUiz(id: number): Observable<Quiz> {
+  deleteQuiz(id: any): Observable<Quiz> {
     return this.http.delete<Quiz>(`${this.url}/${id}`).pipe(
       map((q) => q),
       catchError((e) => this.error(e))

@@ -13,6 +13,8 @@ import { QuizFormComponent } from './quiz/quiz-form/quiz-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './components/alert/alert.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { QuizDeleteComponent } from './quiz/quiz-delete/quiz-delete.component';
+import { QuizTelaComponent } from './quiz/quiz-tela/quiz-tela.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     QuizListComponent,
     QuizFormComponent,
     AlertComponent,
+    QuizDeleteComponent,
+    QuizTelaComponent,
   ],
   imports: [
     BrowserModule,

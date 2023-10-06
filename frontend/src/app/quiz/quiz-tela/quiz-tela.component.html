@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="form-group" *ngIf="quiz && !finished">
+    <span class="quiz-name">{{ quiz.name }}</span>
+    <h5 class="question">{{ num + 1 }}. {{ quiz.questions[num].question }}</h5>
+    <div *ngFor="let r of randomArr">
+      <div
+        class="container-label"
+        *ngIf="quiz.questions[num][r] !== null && quiz.questions[num][r] !== ''"
+      >
+        <label class="btn btn-light" id="{{ r }}" (click)="check($event)">{{
+          quiz.questions[num][r]
+        }}</label>
+      </div>
+    </div>
+    <span class="currentQuestion">{{ num + 1 }}/{{ numQuestions }}</span>
+  </div>
+</div>
+
+<div class="card" *ngIf="finished">
+  <div class="card-body">
+    <p class="card-text">
+      Você acertou {{ correctAnswers }} de {{ numQuestions }} questões.
+    </p>
+    <div class="cards-btn">
+      <button type="button" class="btn btn-warning" (click)="restart()">
+        Refazer
+      </button>
+      <button type="button" class="btn btn-danger" (click)="quit()">
+        Sair
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,12 @@
 <div class="container">
-  <div class="container-table">
-    <table class="table" *ngIf="quizzes; else spinner">
+  <div class="container-table" *ngIf="quizzes; else spinner">
+    <input
+      type="text"
+      class="form-control search-bar"
+      placeholder="Pesquisar Quiz por nome"
+      (input)="search($event)"
+    />
+    <table class="table">
       <thead>
         <tr>
           <th scope="col">Nome</th>
@@ -15,13 +21,18 @@
               <button
                 type="button"
                 class="btn btn-warning bi bi-play-fill"
+                (click)="startQuiz(quiz.id)"
               ></button>
               <button
                 type="button"
                 class="btn btn-secondary bi bi-pencil-square"
                 (click)="onEdit(quiz.id)"
               ></button>
-              <button type="button" class="btn btn-danger bi bi-trash"></button>
+              <button
+                type="button"
+                class="btn btn-danger bi bi-trash"
+                (click)="onDelete(quiz.id)"
+              ></button>
             </div>
           </td>
         </tr>
