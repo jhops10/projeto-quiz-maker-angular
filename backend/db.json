@@ -3,42 +3,42 @@
     {
       "id": 1,
       "name": "Conhecimentos Gerais",
-      "numQuestions": 5,
+      "numQuestions": 10,
       "questions": [
         {
-          "question": "Qual é o maior planeta do nosso sistema solar?",
-          "rest1": "Júpiter",
-          "rest2": "Terra",
-          "rest3": "Marte",
-          "rest4": "Vênus"
+          "question": "Qual é a capital da França?",
+          "res1": "Paris",
+          "res2": "Madri",
+          "res3": "Londres",
+          "res4": "Roma"
         },
         {
-          "question": "Quem escreveu a famosa peça de teatro 'Romeu e Julieta'?",
-          "rest1": "William Shakespeare",
-          "rest2": "Charles Dickens",
-          "rest3": "Jane Austen",
-          "rest4": "F. Scott Fitzgerald"
+          "question": "Quem escreveu 'Dom Quixote'?",
+          "res1": "Miguel de Cervantes",
+          "res2": "Leo Tolstoy",
+          "res3": "Charles Dickens",
+          "res4": "William Shakespeare"
         },
         {
-          "question": "Qual é o maior órgão do corpo humano?",
-          "rest1": "Pele",
-          "rest2": "Coração",
-          "rest3": "Estômago",
-          "rest4": "Fígado"
+          "question": "Qual é o maior planeta do sistema solar?",
+          "res1": "Júpter",
+          "res2": "Marte",
+          "res3": "Saturno",
+          "res4": "Vênus"
         },
         {
-          "question": "Qual é o país mais populoso do mundo?",
-          "rest1": "Índia",
-          "rest2": "Estados Unidos",
-          "rest3": "Rússia",
-          "rest4": "Brasil"
+          "question": "Qual é o metal mais abundante na crosta terrestre",
+          "res1": "Alumínio",
+          "res2": "Ferro",
+          "res3": "Ouro",
+          "res4": "Cobre"
         },
         {
-          "question": "Qual é o processo pelo qual as plantas convertem a luz solar em energia?",
-          "rest1": "Fotossíntese",
-          "rest2": "Respiração",
-          "rest3": "Fermentação",
-          "rest4": "Oxidação"
+          "question": "Qual é o maior oceano do mundo?",
+          "res1": "Oceano Pacífico",
+          "res2": "Oceano Atlântico",
+          "res3": "Oceano Índico",
+          "res4": "Oceano Ártico"
         }
       ]
     }
