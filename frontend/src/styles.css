@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
 * {
   margin: 0;
   padding: 0;
@@ -22,5 +21,89 @@ body {
   align-items: center;
   width: 400px;
   text-align: center;
-  padding: .5rem;
+  padding: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #6c757d;
+  box-shadow: 0 0 0 0.2rem #6c757d3a;
+}
+
+@media screen and (max-width: 680px) {
+  .img-logo {
+    width: 250px;
+  }
+
+  .btn {
+    padding: 0.3rem 0.5rem;
+  }
+
+  .form-control,
+  .form-select {
+    height: fit-content;
+    margin: auto;
+  }
+
+  .container-label {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 380px) and (orientation: portrait) {
+  html {
+    font-size: 0.8rem;
+  }
+
+  .tela,
+  .form-group {
+    width: 330px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .bi-house-fill {
+    margin: 0.5rem 2rem;
+  }
+
+  .list-group-item {
+    width: 340px;
+  }
+
+  .form-control,
+  .form-select {
+    width: 315px;
+  }
+
+  .container-label {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 680px) and (orientation: landscape) {
+  html {
+    font-size: 0.7rem;
+  }
+
+  .tela,
+  .form-group {
+    width: 330px;
+  }
+
+  .container {
+    width: 400px;
+    height: 70vh;
+    margin: 0.4rem 0;
+  }
+
+  .bi-house-fill {
+    margin: 0.4rem;
+    z-index: 999;
+  }
+
+  .container-label {
+    width: 400px;
+  }
 }

@@ -1,6 +1,6 @@
 label {
   width: 100%;
-  margin: .5rem 0;
+  margin: 0.4rem 0;
 }
 
 h5 {
@@ -8,7 +8,7 @@ h5 {
 }
 
 button {
-  margin: .6rem;
+  margin: 0.6rem;
 }
 
 .currentQuestion {

@@ -1,8 +1,8 @@
-.table {
+table {
   width: 380px;
 }
 
-.table td {
+td {
   width: 50%;
 }
 
@@ -10,9 +10,9 @@
   justify-content: start;
   max-height: 70vh;
   overflow-y: auto;
-  margin: .8rem 0;
+  margin: 0.8rem 0;
 }
 
-.search-bar {
-  margin-bottom: 1.5rem;
+input {
+  margin: 0.3rem auto;
 }

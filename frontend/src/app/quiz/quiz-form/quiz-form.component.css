@@ -1,7 +1,3 @@
-label {
-  font-weight: 600;
-}
-
 .alert {
   margin: .8rem 0;
 }
@@ -15,12 +11,11 @@ form {
 }
 
 .correct-input::placeholder {
-  background-color: #a6d5b66e;
-  color: #055105b4;
+  font-weight: 600;
+  color: #04a004b4;
 }
 
 .incorrect-input::placeholder {
-  background-color: #d5a6a66e;
-  color: #510508b9;
-
+  font-weight: 600;
+  color: #ff020ab9;
 }
